@@ -5,7 +5,7 @@ Methodology and Dataset Overview
 Methodology
 This project uses the Unsloth Gemma-2-9B model to fine-tune and evaluate a Natural Language Processing (NLP) model for Hindi language tasks. The methodology involves:
 
-Model Selection:
+#### Model Selection:
 
 The base model, unsloth/gemma-2-9b, supports RoPE scaling, 4-bit quantization for memory efficiency, and fine-tuning with LoRA (Low-Rank Adaptation).
 Flash Attention 2 is utilized to enable softcapping and improve efficiency during training.
@@ -30,7 +30,7 @@ unsloth_gemma_hindi/
 ├── requirements.txt          # Python dependencies
 
 
-Fine-Tuning:
+#### Fine-Tuning:
 
 The LoRA method is used for parameter-efficient fine-tuning by modifying key transformer layers (e.g., q_proj, k_proj, v_proj).
 Training is conducted using SFTTrainer from the trl library, with configurations such as mixed precision (bfloat16), small batch sizes, and linear learning rate schedules.
@@ -42,13 +42,13 @@ Model Deployment:
 
 The final model and tokenizer are saved to Google Drive for future reuse and deployment.
 
-Dataset
+#### Dataset
 The dataset used for fine-tuning is FreedomIntelligence/alpaca-gpt4-hindi, a high-quality Hindi dataset derived from GPT-4 outputs. It contains structured conversations designed for instruction-tuning in the Hindi language.
 
 Structure:
 Each data point includes:
 
-Instruction: The task description.
+#### Instruction: The task description.
 Input: Context or additional information (optional).
 Response: The expected output from the model.
 Preprocessing:
