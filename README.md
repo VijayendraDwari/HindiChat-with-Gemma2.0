@@ -28,8 +28,7 @@ unsloth_gemma_hindi/
 ├── unsloth_gemma_hindi.ipynb  # Main Colab notebook for the project
 ├── README.md                 # Project overview and instructions
 ├── requirements.txt          # Python dependencies
-├── data/                     # (Optional) Folder for datasets
-└── models/                   # (Optional) Folder for saving trained models
+
 
 Fine-Tuning:
 
