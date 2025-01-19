@@ -1,14 +1,58 @@
-### Unsloth Gemma Hindi NLP Project
-This repository contains a Colab notebook that demonstrates the development and fine-tuning of Natural Language Processing (NLP) models for Hindi language tasks. It includes data preprocessing, model training, and evaluation pipelines tailored for applications such as translation, sentiment analysis, and conversational AI.
+# HindiChat with Gemma 2.0 🇮🇳
 
-Methodology and Dataset Overview
-Methodology
-This project uses the Unsloth Gemma-2-9B model to fine-tune and evaluate a Natural Language Processing (NLP) model for Hindi language tasks. The methodology involves:
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Gemma](https://img.shields.io/badge/Gemma-2.0--9B-red)
+![Unsloth](https://img.shields.io/badge/Unsloth-Optimized-green)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-#### Model Selection:
+A state-of-the-art Hindi language chatbot powered by Gemma 2.0, optimized with Unsloth, and fine-tuned on high-quality Hindi conversations.
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Model Architecture](#model-architecture)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Training Details](#training-details)
+- [Performance Metrics](#performance-metrics)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+HindiChat leverages Google's Gemma 2.0 model (9B parameters) with Unsloth optimizations to create a high-performance Hindi language conversational AI. The model is fine-tuned using the FreedomIntelligence/alpaca-gpt4-hindi dataset and implements efficient training techniques including LoRA and Flash Attention 2.
+
+## Features
+
+- 🚀 **Optimized Performance**: Utilizes Unsloth for enhanced efficiency
+- 💡 **Advanced Fine-tuning**: LoRA-based parameter-efficient training
+- ⚡ **Flash Attention 2**: Improved memory usage and training speed
+- 🎯 **Specialized Prompting**: Custom Hindi Alpaca prompt template
+- 📚 **High-Quality Dataset**: Fine-tuned on GPT-4 generated Hindi conversations
+- 🔧 **4-bit Quantization**: Memory-efficient inference
+- 📈 **RoPE Scaling**: Enhanced position encoding
+
+## Model Architecture
+#### 
 
 The base model, unsloth/gemma-2-9b, supports RoPE scaling, 4-bit quantization for memory efficiency, and fine-tuning with LoRA (Low-Rank Adaptation).
 Flash Attention 2 is utilized to enable softcapping and improve efficiency during training.
+
+### Base Model Configuration
+```python
+Model: unsloth/gemma-2-9b
+Parameters: 9 billion
+Quantization: 4-bit
+Attention: Flash Attention 2
+Position Encoding: RoPE with scaling
+```
+Methodology and Dataset Overview
+
+Methodology
+This project uses the Unsloth Gemma-2-9B model to fine-tune and evaluate a Natural Language Processing (NLP) model for Hindi language tasks. The methodology involves:
+
+
 Prompt Design:
 
 A custom Hindi Alpaca Prompt Template is designed to format instructions, inputs, and expected outputs in a conversational structure.
@@ -21,13 +65,6 @@ A custom Hindi Alpaca Prompt Template is designed to format instructions, inputs
 
 ### उत्तर:
 {response}
-
-
-unsloth_gemma_hindi/
-│
-├── unsloth_gemma_hindi.ipynb  # Main Colab notebook for the project
-├── README.md                 # Project overview and instructions
-├── requirements.txt          # Python dependencies
 
 
 #### Fine-Tuning:
