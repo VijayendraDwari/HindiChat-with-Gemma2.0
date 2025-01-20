@@ -33,7 +33,7 @@ HindiChat leverages Google's Gemma 2.0 model (9B parameters) with Unsloth optimi
 - 🔧 **4-bit Quantization**: Memory-efficient inference
 - 📈 **RoPE Scaling**: Enhanced position encoding
 
-## Model Architecture
+## Model Details
 #### 
 
 The base model, unsloth/gemma-2-9b, supports RoPE scaling, 4-bit quantization for memory efficiency, and fine-tuning with LoRA (Low-Rank Adaptation).
